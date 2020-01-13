@@ -2,6 +2,7 @@
 
 function centos7() {
 cat << EOF
+# centos7
 # add below to /etc/yum.repos.d/
 
 [base]
@@ -34,6 +35,7 @@ EOF
 
 function ubuntu14() {
 cat << EOF
+# ubuntu14
 # add below to /etc/apt/sources.list
 
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
@@ -45,8 +47,10 @@ deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
 deb http://openresty.org/package/ubuntu trusty main
 EOF
 }
+
 function ubuntu16() {
 cat << EOF
+# ubuntu16
 # add below to /etc/apt/sources.list
 
 deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
@@ -61,6 +65,7 @@ EOF
 
 function debian10() {
 cat << EOF
+# debian10
 # add below to /etc/apt/sources.list
 
 deb https://mirrors.aliyun.com/debian  stable main contrib non-free
@@ -82,6 +87,9 @@ case $1 in
         debian10
         ;;
     *)
+        centos7
+        ubuntu14
+        ubuntu16
         debian10
         ;;
 esac
