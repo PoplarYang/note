@@ -1,4 +1,11 @@
 ## ali docker image accelerate
 ```txt
-https://9dqq20h8.mirror.aliyuncs.com
+{
+    "registry-mirrors": [
+		"https://9dqq20h8.mirror.aliyuncs.com",
+		"https://docker.mirrors.ustc.edu.cn"
+	],
+    "graph": "/mydata/lib/docker",
+    "bip": "172.20.0.1/24"
+}
 ```
